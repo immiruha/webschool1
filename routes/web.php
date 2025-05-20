@@ -15,8 +15,14 @@ Route::resource('pendaftarans', PendaftaranController::class);
 Route::resource('beritas', BeritaController::class);
 Route::resource('admin/berita', BeritaController::class);
 
+<<<<<<< HEAD
 // Form pendaftaran yang terpisah (form create dan store)
 // Menampilkan form pendaftaran (GET)
 Route::get('/pendaftaran', [FormController::class, 'create'])->name('pendaftarans.create');
 // Proses submit form pendaftaran (POST)
 Route::post('/pendaftaran', [FormController::class, 'store'])->name('pendaftarans.store');
+=======
+Route::get('/welcomeform', function () {
+    return view('welcomeform');
+});
+>>>>>>> 6e7f5b0f70f325184f8f55e7d6b15ffff12b28cf
