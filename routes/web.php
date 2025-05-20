@@ -3,10 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PendaftaranController;
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\HomeController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/home', [HomeController::class, 'index']);
 
 Route::resource('pendaftarans', PendaftaranController::class);
 Route::resource('admin/pendaftaran', PendaftaranController::class);
