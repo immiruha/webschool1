@@ -32,6 +32,11 @@
         </div>
 
         <div style="margin-top:10px;">
+            <label for="alamat_lengkap">Alamat Lengkap:</label><br>
+            <textarea name="alamat_lengkap" id="alamat_lengkap" rows="3" required>{{ old('alamat_lengkap') }}</textarea>
+        </div>
+
+        <div style="margin-top:10px;">
             <label for="jenis_kelamin">Jenis Kelamin:</label><br>
             <select name="jenis_kelamin" id="jenis_kelamin" required>
                 <option value="">-- Pilih --</option>
@@ -88,11 +93,6 @@
         <div style="margin-top:10px;">
             <label for="pekerjaan_ibu">Pekerjaan Ibu:</label><br>
             <input type="text" name="pekerjaan_ibu" id="pekerjaan_ibu" value="{{ old('pekerjaan_ibu') }}" required>
-        </div>
-
-        <div style="margin-top:10px;">
-            <label for="alamat_lengkap">Alamat Lengkap:</label><br>
-            <textarea name="alamat_lengkap" id="alamat_lengkap" rows="3" required>{{ old('alamat_lengkap') }}</textarea>
         </div>
 
         <div style="margin-top:10px;">

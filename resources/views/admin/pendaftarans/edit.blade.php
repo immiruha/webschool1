@@ -37,6 +37,11 @@
         </div>
 
         <div class="mb-3">
+            <label class="form-label">Alamat Lengkap</label>
+            <textarea name="alamat_lengkap" class="form-control" rows="3" required>{{ $pendaftaran->alamat_lengkap }}</textarea>
+        </div>
+
+        <div class="mb-3">
             <label class="form-label">Jenis Kelamin</label><br>
             <select name="jenis_kelamin" class="form-select" required>
                 <option value="Laki - laki" {{ $pendaftaran->jenis_kelamin == 'Laki - laki' ? 'selected' : '' }}>Laki - laki</option>
@@ -58,7 +63,6 @@
              <label class="form-label">Jumlah Saudara</label>
             <input type="text" name="jumlah_saudara" class="form-control" value="{{ $pendaftaran->jumlah_saudara }}" required>
         </div>
-
 
         <div class="mb-3">
             <label class="form-label">NIK Siswa</label>
@@ -93,11 +97,6 @@
         <div class="mb-3">
             <label class="form-label">Pekerjaan Ibu</label>
             <input type="text" name="pekerjaan_ibu" class="form-control" value="{{ $pendaftaran->pekerjaan_ibu }}" required>
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">Alamat Lengkap</label>
-            <textarea name="alamat_lengkap" class="form-control" rows="3" required>{{ $pendaftaran->alamat_lengkap }}</textarea>
         </div>
 
         <div class="mb-3">
