@@ -11,3 +11,7 @@ Route::resource('pendaftarans', PendaftaranController::class);
 Route::resource('admin/pendaftaran', PendaftaranController::class);
 Route::resource('beritas', BeritaController::class);
 Route::resource('admin/berita', BeritaController::class);
+
+Route::get('/welcomeform', function () {
+    return view('welcomeform');
+});
