@@ -20,7 +20,9 @@
                     <th>No</th>
                     <th>Gambar</th>
                     <th>Judul</th>
+                    <th>Kategori</th>
                     <th>Isi</th>
+                    <th>Dibuat Pada</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -36,7 +38,9 @@
                             @endif
                         </td>
                         <td>{{ $berita->judul }}</td>
+                        <td>{{ $berita->kategori }}</td>
                         <td>{{ Str::limit($berita->isi, 100) }}</td>
+                        <td>{{ $berita->created_at->format('d M Y H:i') }}</td>  <!-- Format tanggal & waktu -->
                         <td>
                             <a href="{{ route('berita.edit', $berita->id) }}" class="btn btn-sm btn-warning">Edit</a>
                             <form action="{{ route('berita.destroy', $berita->id) }}" method="POST" style="display:inline-block;">
@@ -48,7 +52,7 @@
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="5" class="text-center">Belum ada berita.</td>
+                        <td colspan="7" class="text-center">Belum ada berita.</td>
                     </tr>
                 @endforelse
             </tbody>

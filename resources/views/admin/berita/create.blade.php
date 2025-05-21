@@ -24,6 +24,16 @@
         </div>
 
         <div class="mb-3">
+            <label for="kategori" class="form-label">Kategori</label>
+            <select name="kategori" id="kategori" class="form-select" required>
+                <option value="" disabled {{ old('kategori') ? '' : 'selected' }}>-- Pilih Kategori --</option>
+                <option value="prestasi" {{ old('kategori') == 'prestasi' ? 'selected' : '' }}>Prestasi</option>
+                <option value="kegiatan" {{ old('kategori') == 'kegiatan' ? 'selected' : '' }}>Kegiatan</option>
+                <option value="ekstrakulikuler" {{ old('kategori') == 'ekstrakulikuler' ? 'selected' : '' }}>Ekstrakulikuler</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
             <label for="isi" class="form-label">Isi</label>
             <textarea name="isi" id="isi" rows="6" class="form-control" required>{{ old('isi') }}</textarea>
         </div>

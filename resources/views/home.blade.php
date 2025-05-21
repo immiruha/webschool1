@@ -472,7 +472,7 @@
     <nav class="main-nav">
         <div class="logo">
             <img src="/api/placeholder/50/50" alt="Logo MI Roudlotul Huda">
-            <div class="logo-text">MI Roudlotul Huda<br>Trebbus Muda</div>
+            <div class="logo-text">MI Roudlotul Huda<br>Klurak, Sidoarjo</div>
         </div>
         <div class="nav-links">
             <a href="#">Beranda</a>
