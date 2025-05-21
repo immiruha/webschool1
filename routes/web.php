@@ -8,3 +8,7 @@ Route::get('/', [HomeController::class, 'index']);
 // Resource controller untuk berita dan admin (sesuaikan kalau perlu)
 Route::resource('beritas', BeritaController::class);
 Route::resource('admin/berita', BeritaController::class);
+
+Route::get('/news-detail', function () {
+    return view('newsdetail');
+});
