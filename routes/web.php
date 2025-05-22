@@ -9,6 +9,4 @@ Route::get('/', [HomeController::class, 'index']);
 Route::resource('beritas', BeritaController::class);
 Route::resource('admin/berita', BeritaController::class);
 
-Route::get('/news-detail', function () {
-    return view('newsdetail');
-});
+Route::get('/news/{id}', [NewsController::class, 'show'])->name('news.detail');
