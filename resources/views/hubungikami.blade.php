@@ -9,109 +9,73 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
             line-height: 1.6;
-            background-color: #f8f9fa;
         }
 
-        /* Header */
-        .header {
-            background: linear-gradient(135deg, #4CAF50, #66BB6A);
-            color: white;
-            padding: 10px 0;
-        }
-
+        /* Header Top */
         .header-top {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            font-size: 14px;
-            gap: 30px;
-        }
-
-        .navbar {
-            background: white;
-            padding: 15px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .nav-container {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+            font-size: 14px;
         }
 
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+       /* Navigation Styles */
+        .main-nav {
+            background-color: white;
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
         .logo {
             display: flex;
             align-items: center;
-            gap: 15px;
         }
-
-        .logo-icon {
-            width: 60px;
-            height: 60px;
-            background: #4CAF50;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
+        
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
         }
-
-        .logo-icon::before {
-            content: '☪';
-            font-size: 24px;
-            color: white;
-        }
-
-        .logo-text h1 {
-            font-size: 20px;
+        
+        .logo-text {
+            font-size: 1.2rem;
             font-weight: bold;
             color: #333;
-            margin-bottom: 2px;
         }
-
-        .logo-text p {
-            font-size: 16px;
-            color: #666;
-        }
-
-        .nav-menu {
+        
+        .nav-links {
             display: flex;
-            list-style: none;
-            gap: 40px;
+            gap: 20px;
         }
-
-        .nav-menu a {
-            color: #333;
+        
+        .nav-links a {
             text-decoration: none;
+            color: #333;
             font-weight: 500;
-            padding: 10px 0;
-            position: relative;
-        }
-
-        .nav-menu a.active {
-            color: #4CAF50;
-            font-weight: bold;
-        }
-
-        .nav-menu a.active::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: #4CAF50;
         }
 
         /* Main Content */
@@ -460,24 +424,22 @@
     <!-- Header -->
     <header class="header">
         <div class="header-top">
-            <span>📞 +62 811 234 4578</span>
-            <span>✉️ injemailsekolah@gmail.com</span>
+            <div class="contact-info">
+                <span>📞 +62 811 234 4578</span>
+                <span>✉️ injemailsekolah@gmail.com</span>
+            </div>
         </div>
         
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="logo">
-                    <div class="logo-icon"></div>
-                    <div class="logo-text">
-                        <h1>Mi Roudlotul Huda</h1>
-                        <p>Wedoro Klurak</p>
-                    </div>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="{{ url('/') }}" class="active">Beranda</a></li>
-                    <li><a href="{{ route('tentang') }}">Tentang Kami</a><li>
-                    <li><a href="{{ route('hubungi') }}">Hubungi Kami</a></li>
-                </ul>
+        <!-- Main Navigation -->
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="/images/logomiruha.jpg" alt="Logo MI Roudlotul Huda">
+                <div class="logo-text">MI Roudlotul Huda <br>Wedoro, Kelurak, Sidoarjo</div>
+            </div>
+            <div class="nav-links">
+                <a href="{{ url('/') }}" class="active">Beranda</a>
+                <a href="{{ route('tentang') }}">Tentang Kami</a>
+                <a href="{{ route('hubungi') }}">Hubungi Kami</a>
             </div>
         </nav>
     </header>

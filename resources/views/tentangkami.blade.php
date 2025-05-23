@@ -41,94 +41,43 @@
             gap: 5px;
         }
 
-        /* Navigation */
+       /* Navigation Styles */
         .main-nav {
             background-color: white;
-            padding: 15px 5%;
+            padding: 10px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
+        
         .logo {
             display: flex;
             align-items: center;
-            gap: 15px;
         }
-
-        .logo-icon {
-            width: 50px;
+        
+        .logo img {
             height: 50px;
-            background: #2E7D32;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            font-weight: bold;
-            color: white;
-            border: 2px solid white;
+            margin-right: 10px;
         }
-
-        .logo-text h1 {
+        
+        .logo-text {
             font-size: 1.2rem;
             font-weight: bold;
             color: #333;
-            margin-bottom: 5px;
         }
-
-        .logo-text p {
-            font-size: 0.9rem;
-            color: #666;
-        }
-
+        
         .nav-links {
             display: flex;
-            list-style: none;
             gap: 20px;
-            align-items: center;
         }
-
+        
         .nav-links a {
-            color: #333;
             text-decoration: none;
+            color: #333;
             font-weight: 500;
-            padding: 8px 15px;
-            border-radius: 5px;
-            transition: all 0.3s ease;
         }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: #4CAF50;
-            background: rgba(76, 175, 80, 0.1);
-        }
-
-        .nav-button {
-            background-color: #FF8C00;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .nav-button:hover {
-            background-color: #e67300;
-        }
-
+        
         /* Main Content */
         .main-content {
             padding: 80px 0;
@@ -375,22 +324,16 @@
             </div>
         </div>
         
+         <!-- Main Navigation -->
         <nav class="main-nav">
-            <div class="nav-container">
-               <div class="logo">
-                <div class="logo-icon">
-                </div>
-                    <div class="logo-text">
-                        <h1>Mi Roudlotul Huda</h1>
-                        <p>Wedoro Klurak</p>
-                    </div>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="{{ url('/') }}" class="active">Beranda</a></li>
-                    <li><a href="{{ route('tentang') }}">Tentang Kami</a><li>
-                    <li><a href="{{ route('hubungi') }}">Hubungi Kami</a></li>
-                    <li><button class="nav-button">PPDB</button></li>
-                </ul>
+            <div class="logo">
+                <img src="/images/logomiruha.jpg" alt="Logo MI Roudlotul Huda">
+                <div class="logo-text">MI Roudlotul Huda<br>Wedoro, Kelurak, Sidoarjo</div>
+            </div>
+            <div class="nav-links">
+                <a href="{{ url('/') }}" class="active">Beranda</a>
+                <a href="{{ route('tentang') }}">Tentang Kami</a>
+                <a href="{{ route('hubungi') }}">Hubungi Kami</a>
             </div>
         </nav>
     </header>

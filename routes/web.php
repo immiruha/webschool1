@@ -15,7 +15,6 @@ Route::get('/hubungi-kami', function () {
     return view('hubungikami'); 
 })->name('hubungi');
 
-
 Route::resource('beritas', BeritaController::class);
 Route::resource('admin/berita', BeritaController::class);
 
