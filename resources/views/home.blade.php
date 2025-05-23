@@ -475,7 +475,7 @@
             <div class="logo-text">MI Roudlotul Huda<br>Wedoro, Kelurak, Sidoarjo</div>
         </div>
         <div class="nav-links">
-            <li><a href="{{ url('/') }}" class="active">Beranda</a></li>
+            <a href="{{ url('/') }}" class="active">Beranda</a>
             <a href="{{ route('tentang') }}">Tentang Kami</a>
             <a href="#">Hubungi Kami</a>
             <button class="nav-button">PPDB</button>

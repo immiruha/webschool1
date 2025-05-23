@@ -379,7 +379,7 @@
             <div class="nav-container">
                <div class="logo">
                 <div class="logo-icon">
-                    <img src="/images/logomiruha.png" alt="Logo MI Roudlotul Huda" style="width: 50px; height: 50px;">
+                    <img src="/images/logomiruha.jpg" alt="Logo MI Roudlotul Huda" style="width: 50px; height: 50px;">
                 </div>
             </div>
                     <div class="logo-text">
@@ -389,7 +389,7 @@
                 </div>
                 <ul class="nav-links">
                     <li><a href="{{ url('/') }}" class="active">Beranda</a></li>
-                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="{{ route('tentang') }}">Tentang Kami</a><li>
                     <li><a href="#">Hubungi Kami</a></li>
                     <li><button class="nav-button">PPDB</button></li>
                 </ul>
@@ -429,7 +429,7 @@
             <section class="photo-section">
                 <h2>Kunjungi Kami 📍</h2>
                 <div class="photo-container">
-                    <img src="https://source.unsplash.com/random/800x400/?islamic,school" alt="Foto MI Roudlotul Huda">
+                    <img src="images/sekolahmiruha.jpg" alt="Foto MI Roudlotul Huda">
                 </div>
             </section>
         </div>
@@ -463,7 +463,9 @@
             
             <div class="footer-right">
                 <div class="footer-map">
-                    <img src="/api/placeholder/800/400" alt="Peta Lokasi">
+                     <a href="https://maps.app.goo.gl/GXGbhuRiG6ThPVjm8" target="_blank">
+                        <img src="/images/mapsmiruha.jpg" alt="Peta Lokasi">
+                    </a>
                 </div>
             </div>
         </div>
