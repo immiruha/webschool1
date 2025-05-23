@@ -627,7 +627,7 @@
         <div class="activities-grid">
             <div class="activity-item">
                 <img src="/api/placeholder/250/150" alt="Maulids">
-                <p>Maulids</p>
+                <p>Maulid</p>
             </div>
             
             <div class="activity-item">
