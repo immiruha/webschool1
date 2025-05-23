@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MI Roudlotul Huda Trebbus Muda</title>
+    <title>MI Roudlotul Huda Wedoro Klurak</title>
     <style>
         * {
             margin: 0;
@@ -471,8 +471,8 @@
     <!-- Main Navigation -->
     <nav class="main-nav">
         <div class="logo">
-            <img src="/api/placeholder/50/50" alt="Logo MI Roudlotul Huda">
-            <div class="logo-text">MI Roudlotul Huda<br>Klurak, Sidoarjo</div>
+            <img src="/images/logomiruha.jpg" alt="Logo MI Roudlotul Huda">
+            <div class="logo-text">MI Roudlotul Huda<br>Wedoro, Kelurak, Sidoarjo</div>
         </div>
         <div class="nav-links">
             <a href="#">Beranda</a>
@@ -493,9 +493,9 @@
     <!-- Sambutan Kepala Sekolah -->
     <div class="sambutan">
         <div class="sambutan-img">
-            <img src="/api/placeholder/200/300" alt="Kepala Sekolah">
+            <img src="/images/kepalasekolah.jpg" alt="Kepala Sekolah">
             <div class="nama-kepala">
-                Nama Kepala Sekolah<br>
+                Ibu Ida<br>
                 MI ROUDLOTUL HUDA
             </div>
         </div>
@@ -613,8 +613,10 @@
                 <div class="location-section">
                     <h4>Lokasi MI Roudlotul Huda</h4>
                     <div class="map-container">
-                        <img src="/api/placeholder/800/300" alt="Peta Lokasi" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
+                    <a href="https://maps.app.goo.gl/GXGbhuRiG6ThPVjm8" target="_blank">
+                        <img src="/images/mapsmiruha.jpg" alt="Peta Lokasi" style="width: 100%; height: 100%; object-fit: cover;">
+                    </a>
+                </div>
                 </div>
             </div>
         </div>
@@ -693,7 +695,9 @@
             
             <div class="footer-right">
                 <div class="footer-map">
-                    <img src="/api/placeholder/400/200" alt="Peta Lokasi" style="width: 100%; height: 100%; object-fit: cover;">
+                    <a href="https://maps.app.goo.gl/GXGbhuRiG6ThPVjm8" target="_blank">
+                    <img src="/images/mapsmiruha.jpg" alt="Peta Lokasi" style="width: 100%; height: 100%; object-fit: cover;">
+                    </a>
                 </div>
             </div>
         </div>
