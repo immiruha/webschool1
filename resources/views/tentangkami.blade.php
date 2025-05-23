@@ -377,15 +377,18 @@
         
         <nav class="main-nav">
             <div class="nav-container">
-                <div class="logo">
-                    <div class="logo-icon">🕌</div>
+               <div class="logo">
+                <div class="logo-icon">
+                    <img src="/images/logomiruha.png" alt="Logo MI Roudlotul Huda" style="width: 50px; height: 50px;">
+                </div>
+            </div>
                     <div class="logo-text">
                         <h1>Mi Roudlotul Huda</h1>
                         <p>Wedoro Klurak</p>
                     </div>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="#" class="active">Beranda</a></li>
+                    <li><a href="{{ url('/') }}" class="active">Beranda</a></li>
                     <li><a href="#">Tentang Kami</a></li>
                     <li><a href="#">Hubungi Kami</a></li>
                     <li><button class="nav-button">PPDB</button></li>

@@ -475,8 +475,8 @@
             <div class="logo-text">MI Roudlotul Huda<br>Wedoro, Kelurak, Sidoarjo</div>
         </div>
         <div class="nav-links">
-            <a href="#">Beranda</a>
-            <a href="#">Tentang Kami</a>
+            <li><a href="{{ url('/') }}" class="active">Beranda</a></li>
+            <a href="{{ route('tentang') }}">Tentang Kami</a>
             <a href="#">Hubungi Kami</a>
             <button class="nav-button">PPDB</button>
         </div>
@@ -628,42 +628,42 @@
         
         <div class="activities-grid">
             <div class="activity-item">
-                <img src="/api/placeholder/250/150" alt="Maulids">
-                <p>Maulid</p>
+                <img src="/images/melukis.png" alt="Maulids">
+                <p>Melukis</p>
             </div>
             
             <div class="activity-item">
-                <img src="/api/placeholder/250/150" alt="Pramuka">
+                <img src="/images/pramukamiruha.jpg" alt="Pramuka">
                 <p>Pramuka</p>
             </div>
             
             <div class="activity-item">
-                <img src="/api/placeholder/250/150" alt="Renang">
-                <p>Renang</p>
+                <img src="/images/berenang.png" alt="Renang">
+                <p>Berenang</p>
             </div>
             
             <div class="activity-item">
-                <img src="/api/placeholder/250/150" alt="Bahasa Inggris">
+                <img src="/images/bhsinggris.png" alt="Bahasa Inggris">
                 <p>Bahasa Inggris</p>
             </div>
             
             <div class="activity-item">
-                <img src="/api/placeholder/250/150" alt="Seni Tari">
-                <p>Seni Tari</p>
+                <img src="/images/banjari.png" alt="Seni Tari">
+                <p>Banjari</p>
             </div>
             
             <div class="activity-item">
-                <img src="/api/placeholder/250/150" alt="Baca Tulis Qur'an">
+                <img src="/images/btq.png" alt="Baca Tulis Qur'an">
                 <p>Baca Tulis Qur'an</p>
             </div>
             
             <div class="activity-item">
-                <img src="/api/placeholder/250/150" alt="Outdoor Learning">
+                <img src="/images/outdoorlearning.png" alt="Outdoor Learning">
                 <p>Outdoor Learning</p>
             </div>
             
             <div class="activity-item">
-                <img src="/api/placeholder/250/150" alt="Pencak Silat">
+                <img src="/images/pencaksilat.png" alt="Pencak Silat">
                 <p>Pencak Silat</p>
             </div>
         </div>
