@@ -477,7 +477,7 @@
         <div class="nav-links">
             <a href="{{ url('/') }}" class="active">Beranda</a>
             <a href="{{ route('tentang') }}">Tentang Kami</a>
-            <a href="#">Hubungi Kami</a>
+            <a href="{{ route('hubungi') }}">Hubungi Kami</a>
             <button class="nav-button">PPDB</button>
         </div>
     </nav>

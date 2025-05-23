@@ -379,9 +379,7 @@
             <div class="nav-container">
                <div class="logo">
                 <div class="logo-icon">
-                    <img src="/images/logomiruha.jpg" alt="Logo MI Roudlotul Huda" style="width: 50px; height: 50px;">
                 </div>
-            </div>
                     <div class="logo-text">
                         <h1>Mi Roudlotul Huda</h1>
                         <p>Wedoro Klurak</p>
@@ -390,7 +388,7 @@
                 <ul class="nav-links">
                     <li><a href="{{ url('/') }}" class="active">Beranda</a></li>
                     <li><a href="{{ route('tentang') }}">Tentang Kami</a><li>
-                    <li><a href="#">Hubungi Kami</a></li>
+                    <li><a href="{{ route('hubungi') }}">Hubungi Kami</a></li>
                     <li><button class="nav-button">PPDB</button></li>
                 </ul>
             </div>

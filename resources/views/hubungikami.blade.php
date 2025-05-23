@@ -474,9 +474,9 @@
                     </div>
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="#" class="active">Beranda</a></li>
-                    <li><a href="#">Tentang Kami</a></li>
-                    <li><a href="#">Hubungi Kami</a></li>
+                    <li><a href="{{ url('/') }}" class="active">Beranda</a></li>
+                    <li><a href="{{ route('tentang') }}">Tentang Kami</a><li>
+                    <li><a href="{{ route('hubungi') }}">Hubungi Kami</a></li>
                 </ul>
             </div>
         </nav>

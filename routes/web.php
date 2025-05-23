@@ -11,6 +11,11 @@ Route::get('/tentang-kami', function () {
     return view('tentangkami');
 })->name('tentang');
 
+Route::get('/hubungi-kami', function () {
+    return view('hubungikami'); 
+})->name('hubungi');
+
+
 Route::resource('beritas', BeritaController::class);
 Route::resource('admin/berita', BeritaController::class);
 
