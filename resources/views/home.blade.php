@@ -472,7 +472,7 @@
     <nav class="main-nav">
         <div class="logo">
             <img src="/images/logomiruha.jpg" alt="Logo MI Roudlotul Huda">
-            <div class="logo-text">MI Roudlotul Huda<br>Wedoro, Kelurak, Sidoarjo</div>
+            <div class="logo-text">MI Roudlotul Huda<br>Wedoro, Klurak, Sidoarjo</div>
         </div>
         <div class="nav-links">
             <a href="{{ url('/') }}" class="active">Beranda</a>
@@ -495,7 +495,7 @@
         <div class="sambutan-img">
             <img src="/images/kepalasekolah.jpg" alt="Kepala Sekolah">
             <div class="nama-kepala">
-                Ibu Ida<br>
+                Ida Rokhimawati, S.Pd<br>
                 MI ROUDLOTUL HUDA
             </div>
         </div>

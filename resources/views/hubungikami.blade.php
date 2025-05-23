@@ -95,8 +95,13 @@
         }
 
         .school-logo {
-            display: flex;
-            justify-content: center;
+        text-align: center;
+        margin-top: 15px;
+        }
+
+        .logo-img {
+        width: 250px; /* Ubah sesuai ukuran yang kamu mau, bisa 250px, 300px, dll */
+        height: auto;
         }
 
         .logo-badge {
@@ -433,8 +438,8 @@
         <!-- Main Navigation -->
         <nav class="main-nav">
             <div class="logo">
-                <img src="/images/logomiruha.jpg" alt="Logo MI Roudlotul Huda">
-                <div class="logo-text">MI Roudlotul Huda <br>Wedoro, Kelurak, Sidoarjo</div>
+                <img src="/images/logo.png" alt="Logo MI Roudlotul Huda">
+                <div class="logo-text">MI Roudlotul Huda <br>Wedoro, Klurak, Sidoarjo</div>
             </div>
             <div class="nav-links">
                 <a href="{{ url('/') }}" class="active">Beranda</a>
@@ -449,7 +454,7 @@
         <!-- School Introduction -->
         <section class="school-intro">
             <div class="school-logo">
-                <div class="logo-badge"></div>
+                <img src="images/logo.png" alt="Logo Sekolah" class="logo-img">
             </div>
             <div class="school-info">
                 <h1>MI ROUDLOTUL HUDA</h1>

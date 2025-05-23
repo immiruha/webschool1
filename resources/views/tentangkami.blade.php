@@ -328,7 +328,7 @@
         <nav class="main-nav">
             <div class="logo">
                 <img src="/images/logomiruha.jpg" alt="Logo MI Roudlotul Huda">
-                <div class="logo-text">MI Roudlotul Huda<br>Wedoro, Kelurak, Sidoarjo</div>
+                <div class="logo-text">MI Roudlotul Huda<br>Wedoro, Klurak, Sidoarjo</div>
             </div>
             <div class="nav-links">
                 <a href="{{ url('/') }}" class="active">Beranda</a>
