@@ -431,7 +431,7 @@
         <div class="header-top">
             <div class="contact-info">
                 <span>📞 +62 811 234 4578</span>
-                <span>✉️ injemailsekolah@gmail.com</span>
+                <span>✉️ miruhasda@gmail.com</span>
             </div>
         </div>
         

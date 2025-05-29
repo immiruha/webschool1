@@ -464,7 +464,7 @@
     <div class="header-top">
         <div class="contact-info">
             <span>📞 +62 811 234 5678</span>
-            <span>📧 miroudlotulhuda@gmail.com</span>
+            <span>✉️ miruhasda@gmail.com</span>
         </div>
     </div>
     
@@ -508,61 +508,21 @@
         </div>
     </div>
     
-    <!-- News and Achievement Section -->
-    <div class="news-achievement-container">
-        <!-- Berita Terkini -->
-        <div class="news-section">
-            <div class="section-header">
-                <h2 class="section-title">Berita Terkini</h2>
-                <a href="#" class="read-more">Lihat semua</a>
-            </div>
-            
-            <div class="news-grid">
-                <div class="news-item featured-news">
-                    <img src="/api/placeholder/400/250" alt="Kegiatan Pramuka">
-                    <div class="news-content">
-                        <span class="category-tag category-pramuka">Pramuka</span>
-                        <div class="news-date">📅 24 Agustus 2023</div>
-                        <h3 class="news-title">Membanggakan, Siswa siswi memenangkan lomba pramuka.</h3>
-                        <p class="news-excerpt">Prestasi membanggakan kembali diraih oleh siswa-siswi MI Roudlotul Huda dalam lomba kepramukaan tingkat kecamatan.</p>
-                        <a href="#" class="read-more">Selengkapnya</a>
-                    </div>
-                </div>
-                
-                <div class="news-item">
-                    <img src="/api/placeholder/300/150" alt="Kegiatan Olahraga">
-                    <div class="news-content">
-                        <span class="category-tag category-olahraga">Olahraga</span>
-                        <div class="news-date">📅 18 Juli 2023</div>
-                        <h3 class="news-title">Acara Senam bersama untuk tingkatkan kesehatan jasmani dan rohani</h3>
-                        <p class="news-excerpt">Kegiatan senam pagi yang diadakan setiap hari Jumat...</p>
-                        <a href="#" class="read-more">Selengkapnya</a>
-                    </div>
-                </div>
-                
-                <div class="news-item">
-                    <img src="/api/placeholder/300/150" alt="Kegiatan Belajar">
-                    <div class="news-content">
-                        <span class="category-tag category-kegiatan">Kegiatan</span>
-                        <div class="news-date">📅 5 Juni 2023</div>
-                        <h3 class="news-title">MI Roudlotul Huda mengadakan pelatihan literasi bagi siswa kelas lima</h3>
-                        <p class="news-excerpt">Program peningkatan literasi untuk mendukung kemampuan membaca dan menulis...</p>
-                        <a href="#" class="read-more">Selengkapnya</a>
-                    </div>
-                </div>
-                
-                <div class="news-item">
-                    <img src="/api/placeholder/300/150" alt="Kegiatan Akademik">
-                    <div class="news-content">
-                        <span class="category-tag category-akademik">Akademik</span>
-                        <div class="news-date">📅 20 Mei 2023</div>
-                        <h3 class="news-title">Ujian Akhir Semester genap telah dilaksanakan dengan lancar</h3>
-                        <p class="news-excerpt">Pelaksanaan ujian akhir semester genap berjalan dengan tertib...</p>
-                        <a href="#" class="read-more">Selengkapnya</a>
-                    </div>
+    <!-- Berita -->
+    <div class="news-grid">
+        @foreach ($beritas as $berita)
+            <div class="news-item {{ $loop->first ? 'featured-news' : '' }}">
+                <img src="{{ asset('storage/berita/...' . $berita->gambar) }}" alt="{{ $berita->judul }}">
+                <div class="news-content">
+                    <span class="category-tag category-{{ strtolower($berita->kategori) }}">{{ $berita->kategori }}</span>
+                    <div class="news-date">📅 {{ $berita->created_at->format('d F Y') }}</div>
+                    <h3 class="news-title">{{ $berita->judul }}</h3>
+                    <p class="news-excerpt">{{ Str::limit(strip_tags($berita->isi), 100) }}</p>
+                    <a href="{{ route('berita.show', $berita->id) }}" class="read-more">Selengkapnya</a>
                 </div>
             </div>
-        </div>
+        @endforeach
+    </div>
         
         <!-- Achievement Section -->
         <div class="achievement-section">

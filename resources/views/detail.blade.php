@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Roudlotul Huda Wedoro Klurak</title>
+    <title>Membanggakan, Siswa Siswi Memenangkan Lomba Pramuka - MI Roudlotul Huda</title>
     <style>
-        * {
+       * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -77,116 +77,136 @@
             color: #333;
             font-weight: 500;
         }
-        
+
         /* Main Content */
         .main-content {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-        }
-
-        .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
+            padding: 30px 20px;
+            background: white;
+            min-height: calc(100vh - 200px);
         }
 
-        /* Contact Section */
-        .contact-section {
-            background: linear-gradient(135deg, #4CAF50, #66BB6A);
-            padding: 50px;
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #4CAF50;
+            text-decoration: none;
+            margin-bottom: 25px;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border: 2px solid #e9ecef;
             border-radius: 25px;
-            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             position: relative;
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(76, 175, 80, 0.3);
         }
 
-        .contact-section::before {
+        .back-button::before {
             content: '';
             position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            pointer-events: none;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(76, 175, 80, 0.1), transparent);
+            transition: left 0.5s ease;
         }
 
-        .contact-section h2 {
-            font-size: 36px;
-            margin-bottom: 40px;
-            font-weight: bold;
+        .back-button:hover {
+            color: #2E7D32;
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+            border-color: #4CAF50;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
         }
 
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 25px;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            transition: all 0.3s ease;
+        .back-button:hover::before {
+            left: 100%;
         }
 
-        .contact-item:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateX(10px);
+        .back-button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-        }
-
-        .contact-text {
+        .back-button .arrow {
             font-size: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .back-button:hover .arrow {
+            transform: translateX(-3px);
+        }
+
+        .article-header {
+            margin-bottom: 30px;
+        }
+
+        .article-title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .category-tag {
+            background: #4CAF50;
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 14px;
             font-weight: 500;
         }
 
-        /* Photo Section (formerly Map Section) */
-        .photo-section {
-            margin-top: 20px;
-        }
-
-        .photo-section h2 {
-            font-size: 36px;
-            color: #4CAF50;
-            margin-bottom: 20px;
+        .article-date {
+            color: #666;
+            font-size: 14px;
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 5px;
         }
 
-        .photo-container {
-            border-radius: 15px;
-            overflow: hidden;
-            height: 400px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .photo-container img {
+        .article-image {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .photo-container img:hover {
-            transform: scale(1.03);
+        .article-image img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
-        /* Footer */
+        .article-content {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        .article-content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+       /* Footer */
         .footer {
             background: linear-gradient(135deg, #FF9800, #FFB74D);
             color: white;
@@ -248,56 +268,56 @@
             margin-bottom: 8px;
         }
 
-        /* Responsive */
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .header-top {
+            .header-main .container {
                 flex-direction: column;
-                gap: 10px;
+                gap: 20px;
             }
 
-            .contact-info {
-                gap: 15px;
-                font-size: 12px;
-            }
-
-            .nav-container {
-                flex-direction: column;
+            .nav-menu {
                 gap: 15px;
             }
 
-            .nav-links {
-                gap: 10px;
-                flex-wrap: wrap;
-                justify-content: center;
+            .nav-menu a {
+                font-size: 14px;
+                padding: 6px 10px;
             }
 
-            .container {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                padding: 0 15px;
-            }
-
-            .contact-section, .photo-container {
-                padding: 30px 20px;
-            }
-
-            .photo-container {
-                height: 300px;
+            .article-title {
+                font-size: 24px;
             }
 
             .footer-content {
-                flex-direction: column;
+                grid-template-columns: 1fr;
                 gap: 30px;
             }
 
-            .footer-left, .footer-right {
-                flex: 1;
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-content {
+                padding: 20px 15px;
+            }
+
+            .article-title {
+                font-size: 20px;
+            }
+
+            .article-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
+   <!-- Header -->
     <header class="header">
         <div class="header-top">
             <div class="contact-info">
@@ -322,41 +342,28 @@
 
     <!-- Main Content -->
     <main class="main-content">
-        <div class="container">
-            <!-- Contact Section -->
-            <section class="contact-section">
-                <h2>Hubungi Kami</h2>
-                
-                <div class="contact-item">
-                    <div class="contact-icon">📘</div>
-                    <div class="contact-text">@Miruhawedoroklurak</div>
-                </div>
-                
-                <div class="contact-item">
-                    <div class="contact-icon">📷</div>
-                    <div class="contact-text">@Miruhawedoroklurak</div>
-                </div>
-                
-                <div class="contact-item">
-                    <div class="contact-icon">✉️</div>
-                    <div class="contact-text">@Miruhawedoroklurak</div>
-                </div>
-                
-                <div class="contact-item">
-                    <div class="contact-icon">📱</div>
-                    <div class="contact-text">+62 123 456</div>
-                </div>
-            </section>
+        <a href="#" class="back-button">
+            <span class="arrow">←</span>
+            <span>Kembali</span>
+        </a>
+        
+       <article>
+        <header class="article-header">
+            <h1 class="article-title">{{ $berita->judul }}</h1>
+            <div class="article-meta">
+                <span class="category-tag">{{ $berita->kategori }}</span>
+                <span class="article-date">🗓️ {{ \Carbon\Carbon::parse($berita->created_at)->format('d F Y') }}</span>
+            </div>
+            <div class="article-image">
+                <img src="{{ asset('storage/berita/' . $berita->gambar) }}" alt="{{ $berita->judul }}">
+            </div>
+            <div class="article-content">
+                {!! $berita->isi !!}
+            </div>
+        </header>
+        </article>
 
-            <!-- Photo Section (formerly Map Section) -->
-            <section class="photo-section">
-                <h2>Kunjungi Kami 📍</h2>
-                <div class="photo-container">
-                    <img src="images/sekolahmiruha.jpg" alt="Foto MI Roudlotul Huda">
-                </div>
-            </section>
-        </div>
-    </main>
+        </main>
 
     <!-- Footer -->
     <footer class="footer">
