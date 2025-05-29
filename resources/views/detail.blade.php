@@ -342,7 +342,7 @@
 
     <!-- Main Content -->
     <main class="main-content">
-        <a href="#" class="back-button">
+        <a href="{{ url('/') }}" class="back-button">
             <span class="arrow">←</span>
             <span>Kembali</span>
         </a>
