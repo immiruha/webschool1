@@ -474,7 +474,7 @@
             <img src="/images/logomiruha.jpg" alt="Logo MI Roudlotul Huda">
             <div class="logo-text">MI Roudlotul Huda<br>Wedoro, Klurak, Sidoarjo</div>
         </div>
-        <div class="nav-links">
+       <div class="nav-links">
             <a href="{{ url('/') }}" class="active">Beranda</a>
             <a href="{{ route('tentang') }}">Tentang Kami</a>
             <a href="{{ route('hubungi') }}">Hubungi Kami</a>
@@ -512,13 +512,13 @@
     <div class="news-grid">
         @foreach ($beritas as $berita)
             <div class="news-item {{ $loop->first ? 'featured-news' : '' }}">
-                <img src="{{ asset('storage/berita/...' . $berita->gambar) }}" alt="{{ $berita->judul }}">
+                <img src="{{ asset('storage/berita/' . $berita->gambar) }}" alt="{{ $berita->judul }}">
                 <div class="news-content">
                     <span class="category-tag category-{{ strtolower($berita->kategori) }}">{{ $berita->kategori }}</span>
                     <div class="news-date">📅 {{ $berita->created_at->format('d F Y') }}</div>
                     <h3 class="news-title">{{ $berita->judul }}</h3>
                     <p class="news-excerpt">{{ Str::limit(strip_tags($berita->isi), 100) }}</p>
-                    <a href="{{ route('berita.show', $berita->id) }}" class="read-more">Selengkapnya</a>
+                    <a href="{{ route('berita.show.public', $berita->id) }}" class="read-more">Selengkapnya</a>
                 </div>
             </div>
         @endforeach

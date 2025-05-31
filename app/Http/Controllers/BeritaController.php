@@ -9,10 +9,18 @@ use Illuminate\Support\Facades\Storage;
 
 class BeritaController extends Controller
 {
+    // Untuk admin: menampilkan semua berita di halaman admin (CRUD)
     public function index()
     {
         $beritas = Berita::latest()->get();
         return view('admin.berita.index', compact('beritas'));
+    }
+
+    // Untuk user biasa: menampilkan berita untuk halaman publik
+    public function indexPublic()
+    {
+        $beritas = Berita::latest()->get();
+        return view('berita.index', compact('beritas')); 
     }
 
     public function create()
@@ -39,7 +47,8 @@ class BeritaController extends Controller
 
         Berita::create($data);
 
-        return redirect()->route('berita.index')->with('success', 'Berita berhasil ditambahkan.');
+        // Redirect ke route admin.berita.index karena ini admin CRUD
+        return redirect()->route('admin.berita.index')->with('success', 'Berita berhasil ditambahkan.');
     }
 
     public function edit(Berita $berita)
@@ -58,9 +67,7 @@ class BeritaController extends Controller
 
         $data = $request->only('judul', 'isi', 'kategori');
 
-        // Jika ada gambar baru, upload dan hapus gambar lama
         if ($request->hasFile('gambar')) {
-            // Hapus gambar lama jika ada
             if ($berita->gambar && Storage::exists('public/berita/' . $berita->gambar)) {
                 Storage::delete('public/berita/' . $berita->gambar);
             }
@@ -73,24 +80,24 @@ class BeritaController extends Controller
 
         $berita->update($data);
 
-        return redirect()->route('berita.index')->with('success', 'Berita berhasil diperbarui.');
+        return redirect()->route('admin.berita.index')->with('success', 'Berita berhasil diperbarui.');
     }
 
     public function destroy(Berita $berita)
     {
-        // Hapus gambar jika ada
         if ($berita->gambar && Storage::exists('public/berita/' . $berita->gambar)) {
             Storage::delete('public/berita/' . $berita->gambar);
         }
 
         $berita->delete();
 
-        return redirect()->route('berita.index')->with('success', 'Berita berhasil dihapus.');
-    }
-    public function show($id)
-    {
-    $berita = Berita::findOrFail($id);
-    return view('detail', compact('berita'));
+        return redirect()->route('admin.berita.index')->with('success', 'Berita berhasil dihapus.');
     }
 
+    // Menampilkan detail berita untuk user biasa
+    public function show($id)
+    {
+        $berita = Berita::findOrFail($id);
+        return view('detail', compact('berita')); // pastikan ada view 'detail'
+    }
 }
