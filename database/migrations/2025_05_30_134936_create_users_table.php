@@ -12,8 +12,10 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable(); 
             $table->string('password');
-            $table->string('role')->default('user'); // kolom role untuk bedakan admin/user
+            $table->string('role')->default('user'); 
+            $table->rememberToken();
             $table->timestamps();
         });
     }
