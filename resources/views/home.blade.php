@@ -66,12 +66,18 @@
         .nav-links {
             display: flex;
             gap: 20px;
+            align-items: center;
         }
         
         .nav-links a {
             text-decoration: none;
             color: #333;
             font-weight: 500;
+            padding: 8px 15px;       
+            border-radius: 5px;      
+            display: inline-flex;    
+            align-items: center;     
+            height: 36px;     
         }
         
         .nav-button {
@@ -82,11 +88,14 @@
             border-radius: 5px;
             cursor: pointer;
             font-weight: bold;
+            height: 36px;
+            display: inline-flex;
+            align-items: center;
         }
         
         /* Hero Section */
         .hero {
-            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('public/image/sekolahmiruha.jpg');
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("{{ asset('images/sekolahmiruha.jpg') }}");
             background-size: cover;
             background-position: center;
             color: white;
@@ -225,6 +234,12 @@
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
+        .achievement-list {
+            list-style-type: none;
+            max-height: 300px;       
+            overflow-y: auto;        
+            padding-right: 10px;     
+        }
         
         /* News Section */
         .news-section {
@@ -252,10 +267,16 @@
         
         .news-item img {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
+            height: 200px;           
+            object-fit: cover;       
+            image-rendering: auto;   
+            image-rendering: crisp-edges; 
+            -webkit-backface-visibility: hidden; 
+            backface-visibility: hidden;
+            -webkit-transform: translateZ(0); 
+            transform: translateZ(0);
         }
-        
+
         .news-content {
             padding: 15px;
         }

@@ -16,6 +16,11 @@
                 Manajemen Berita
             </h2>
             <div class="d-flex gap-3">
+                <a href="{{ url('/') }}" class="btn btn-primary btn-lg">
+                    <i class="fas fa-home me-2"></i>
+                    KEMBALI KE HOME
+                </a>
+                
                 <a href="{{ route('admin.berita.create') }}" class="btn btn-success btn-lg">
                     <i class="fas fa-plus me-2"></i>
                     TAMBAH BERITA
@@ -102,12 +107,9 @@
 <div class="card-custom">
     <div class="card-header-custom">
         <div class="d-flex justify-content-between align-items-center">
-            <h4 class="mb-0">
-                <i class="fas fa-list me-2"></i>
+            <h4 class="mb-0 d-flex align-items-center">
                 Daftar Berita
             </h4>
-            <div class="d-flex gap-2">
-            </div>
         </div>
     </div>
     
@@ -266,6 +268,18 @@
 </div>
 
 <style>
+    .btn-primary {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    border: none;
+    color: white;
+    }
+
+    .btn-primary:hover {
+        background: linear-gradient(45deg, #0056b3, #004085);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+        color: white;
+    }
     .btn-lg {
         padding: 12px 24px;
         font-size: 16px;
@@ -372,6 +386,31 @@
     .badge {
         font-size: 0.75rem;
         padding: 0.5rem 0.75rem;
+    }
+
+    .card-header-custom {
+        padding: 1.25rem;
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #dee2e6;
+        border-radius: 0.375rem 0.375rem 0 0;
+    }
+
+    .card-header-custom h4 {
+        font-weight: 600;
+        color: #495057;
+    }
+
+    .card-header-custom .fas {
+        font-size: 1.1rem;
+        vertical-align: middle;
+    }
+
+    .header-icon {
+        width: 20px;
+        height: 20px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .card-custom:hover {

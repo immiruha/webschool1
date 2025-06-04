@@ -1,5 +1,4 @@
-@extends('layouts.admin')
-
+@extends('layouts.auth')
 @section('title', 'Login')
 
 @section('content')
@@ -7,7 +6,9 @@
     <div class="login-section">
         <div class="logo-section">
             <div class="logo">
-                <div class="logo-icon">🏫</div>
+                <div class="logo-icon">
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo MI Roudlotul Huda" class="logo-image">
+                </div>
                 <div class="logo-text">MI Roudlotul Huda</div>
             </div>
         </div>
@@ -59,30 +60,9 @@
                         <div class="invalid-feedback" style="color: #ff6b6b; font-size: 14px; margin-top: 5px;">{{ $message }}</div>
                     @enderror
                 </div>
-
-                <div class="form-options">
-                    <div class="remember-me">
-                        <input 
-                            type="checkbox" 
-                            name="remember" 
-                            id="remember" 
-                            {{ old('remember') ? 'checked' : '' }}
-                        >
-                        <label for="remember">Remember me</label>
-                    </div>
-                    @if (Route::has('password.request'))
-                        <a href="{{ route('password.request') }}" class="forgot-password">Forgot Password</a>
-                    @endif
-                </div>
-
                 <button type="submit" class="login-button">Login</button>
             </form>
 
-            @if (Route::has('register'))
-                <div class="signup-link">
-                    Don't have an account? <a href="{{ route('register') }}">Sign up</a>
-                </div>
-            @endif
         </div>
     </div>
 
@@ -105,7 +85,6 @@
 </div>
 
 <style>
-    /* Override for login page */
     .main-content {
         display: flex;
         align-items: center;
@@ -114,12 +93,10 @@
         background: none;
     }
     
-    /* Hide sidebar on login page */
     .sidebar {
         display: none !important;
     }
     
-    /* Expand content area */
     .col-md-9.col-lg-10 {
         width: 100%;
         max-width: none;
@@ -127,7 +104,6 @@
         padding: 0;
     }
     
-    /* Add your custom styles here */
     * {
         margin: 0;
         padding: 0;
@@ -175,16 +151,23 @@
     }
 
     .logo-icon {
-        width: 40px;
-        height: 40px;
-        background: linear-gradient(135deg, #4CAF50, #45a049);
-        border-radius: 50%;
+        width: 50px;
+        height: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
+    }
+
+    .logo-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; 
+        object-position: center;
+    }
+
+    .logo-icon {
+        width: 60px;
+        height: 60px;
     }
 
     .logo-text {

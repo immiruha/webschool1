@@ -67,15 +67,21 @@
             color: #333;
         }
         
-        .nav-links {
+         .nav-links {
             display: flex;
             gap: 20px;
+            align-items: center;
         }
         
         .nav-links a {
             text-decoration: none;
             color: #333;
             font-weight: 500;
+            padding: 8px 15px;       
+            border-radius: 5px;      
+            display: inline-flex;    
+            align-items: center;     
+            height: 36px;     
         }
 
         /* Main Content */
@@ -307,64 +313,61 @@
 
         /* Footer */
         .footer {
-            background: linear-gradient(135deg, #FF9800, #FFB74D);
+            background-color: #FF8C00;
             color: white;
-            padding: 40px 0;
+            padding: 30px 5%;
+            margin-top: 40px;
         }
-
+        
         .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 40px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
         }
-
-        .footer-section h3 {
-            font-size: 18px;
-            margin-bottom: 20px;
+        
+        .footer-left {
+            flex: 1 1 300px;
+        }
+        
+        .footer-title {
+            font-size: 1.2rem;
             font-weight: bold;
+            margin-bottom: 15px;
         }
-
-        .footer-section p {
-            margin-bottom: 10px;
+        
+        .footer-address {
+            margin-bottom: 15px;
             line-height: 1.6;
-            font-size: 14px;
         }
-
+        
         .social-links {
             display: flex;
-            flex-direction: column;
-            gap: 10px;
+            gap: 15px;
+            margin-bottom: 15px;
         }
-
-        .social-link {
+        
+        .social-links a {
             display: flex;
             align-items: center;
-            gap: 10px;
             color: white;
             text-decoration: none;
-            font-size: 14px;
+            transition: all 0.3s ease;
         }
-
-        .social-icon {
-            width: 30px;
-            height: 30px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
+        
+        .social-links a:hover {
+            transform: translateY(-3px);
         }
-
-        .hours-info {
-            font-size: 14px;
+        
+        .footer-right {
+            flex: 1 1 300px;
         }
-
-        .hours-info div {
-            margin-bottom: 8px;
+        
+        .footer-map {
+            height: 200px;
+            background-color: #e9e9e9;
+            border-radius: 5px;
+            overflow: hidden;
         }
 
         /* Responsive */
@@ -569,44 +572,38 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <div class="footer">
         <div class="footer-content">
-            <div class="footer-section">
-                <h3>MI ROUDLOTUL HUDA WEDORO KLURAK</h3>
-                <p><strong>Alamat:</strong> Desa Wedoro Klurak RT 09 RW 02</p>
-                <p>Candi Sidoarjo, Jawa Timur, Indonesia</p>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Media Sosial</h3>
+            <div class="footer-left">
+                <div class="footer-title">MI ROUDLOTUL HUDA WEDORO KLURAK</div>
+                <div class="footer-address">
+                    Alamat: Desa Wedoro Kulon RT 03 RW 02<br>
+                    Candi Sidoarjo, Jawa Timur, Indonesia
+                </div>
+                
                 <div class="social-links">
-                    <a href="#" class="social-link">
-                        <div class="social-icon">📘</div>
-                        <span>@Miruhawedoroklurak</span>
-                    </a>
-                    <a href="#" class="social-link">
-                        <div class="social-icon">📷</div>
-                        <span>@Miruhawedoroklurak</span>
-                    </a>
-                    <a href="#" class="social-link">
-                        <div class="social-icon">🎥</div>
-                        <span>@Miruhawedoroklurak</span>
-                    </a>
-                    <a href="#" class="social-link">
-                        <div class="social-icon">📱</div>
-                        <span>+62 123 456</span>
-                    </a>
+                    <a href="#"><span>📱 WhatsApp</span></a>
+                </div>
+                <div class="social-links">
+                    <a href="#"><span>📘 miroudlotulhuda</span></a>
+                </div>
+                <div class="social-links">
+                    <a href="#"><span>📷 @miroudlotulhuda</span></a>
+                </div>
+                <div class="social-links">
+                    <a href="#"><span>📞 031 123 456</span></a>
                 </div>
             </div>
             
-            <div class="footer-section">
-                <h3>Jam Operasional</h3>
-                <div class="hours-info">
-                    <div><strong>Senin - Jumat:</strong> 07:00 - 17:00</div>
-                    <div><strong>Sabtu - Minggu:</strong> 08:00 - 16:00</div>
+            <div class="footer-right">
+                <div class="footer-map">
+                    <a href="https://maps.app.goo.gl/GXGbhuRiG6ThPVjm8" target="_blank">
+                    <img src="/images/mapsmiruha.jpg" alt="Peta Lokasi" style="width: 100%; height: 100%; object-fit: cover;">
+                    </a>
                 </div>
             </div>
         </div>
+    </div>
     </footer>
 </body>
 </html>

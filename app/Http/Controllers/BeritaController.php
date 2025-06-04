@@ -34,7 +34,7 @@ class BeritaController extends Controller
             'judul' => 'required|string|max:255',
             'isi' => 'required|string',
             'kategori' => 'required|in:prestasi,kegiatan,ekstrakulikuler',
-            'gambar' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'gambar' => 'nullable|image|mimes:jpeg,png,jpg',
         ]);
 
         $data = $request->only('judul', 'isi', 'kategori');

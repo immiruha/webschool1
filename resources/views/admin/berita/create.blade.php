@@ -147,7 +147,7 @@
                         @enderror
                         <div class="form-text">
                             <i class="fas fa-info-circle me-1"></i>
-                            Format yang didukung: JPG, PNG, GIF. Maksimal 2MB
+                            Format yang didukung: JPEG, JPG, PNG.
                         </div>
                         
                         <!-- Preview Gambar -->
