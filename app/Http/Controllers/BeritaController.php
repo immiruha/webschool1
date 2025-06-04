@@ -41,7 +41,7 @@ class BeritaController extends Controller
         if ($request->hasFile('gambar')) {
             $gambar = $request->file('gambar');
             $filename = Str::slug($request->judul) . '-' . time() . '.' . $gambar->getClientOriginalExtension();
-            $gambar->storeAs($filename);
+            $gambar->storeAs('berita', $filename, 'public');
             $data['gambar'] = $filename;
         }
 
@@ -74,7 +74,7 @@ class BeritaController extends Controller
 
             $gambar = $request->file('gambar');
             $filename = Str::slug($request->judul) . '-' . time() . '.' . $gambar->getClientOriginalExtension();
-            $gambar->storeAs('public/berita', $filename);
+            $gambar->storeAs('berita', $filename, 'public');
             $data['gambar'] = $filename;
         }
 
