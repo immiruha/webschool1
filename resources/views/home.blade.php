@@ -86,11 +86,11 @@
         
         /* Hero Section */
         .hero {
-            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/api/placeholder/800/400');
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('public/image/sekolahmiruha.jpg');
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 60px 5%;
+            padding: 100px 5%;  
             text-align: left;
             margin-bottom: 20px;
         }
@@ -98,12 +98,20 @@
         .hero h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+        }
+        
+        .hero h4 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
         }
         
         .hero p {
             font-size: 1rem;
             margin-bottom: 20px;
             max-width: 600px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
         }
         
         .hero-button {
@@ -117,17 +125,34 @@
             text-decoration: none;
             display: inline-block;
             margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .hero-button:hover {
+            background-color: #e67e00;
+            transform: translateY(-2px);
+        }
+        
+        /* Sambutan and Achievement Container */
+        .sambutan-achievement-container {
+            display: flex;
+            padding: 0 5%;
+            gap: 30px;
+            margin: 20px 0;
+            flex-wrap: wrap;
         }
         
         /* Sambutan Section */
         .sambutan {
             background-color: #4CAF50;
-            padding: 20px 5%;
-            margin: 20px 0;
+            padding: 20px;
             color: white;
             display: flex;
             align-items: center;
             gap: 20px;
+            flex: 1 1 70%;
+            min-width: 300px;
+            border-radius: 5px;
         }
         
         .sambutan-img {
@@ -160,16 +185,14 @@
             border-radius: 5px;
         }
         
-        /* News and Achievement Container */
-        .news-achievement-container {
-            display: flex;
-            padding: 20px 5%;
-            gap: 30px;
-        }
-        
-        /* News Section */
-        .news-section {
-            flex: 0 0 65%;
+        /* Achievement Section */
+        .achievement-section {
+            flex: 1 1 25%;
+            min-width: 250px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         
         .section-header {
@@ -185,9 +208,32 @@
             padding-left: 10px;
         }
         
+        .achievement-list {
+            list-style-type: none;
+        }
+        
+        .achievement-item {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .achievement-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* News Section */
+        .news-section {
+            padding: 20px 5%;
+        }
+        
         .news-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
         }
         
@@ -196,12 +242,17 @@
             border-radius: 5px;
             overflow: hidden;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .news-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
         
         .news-item img {
             width: 100%;
-            height: 150px;
+            height: 200px;
             object-fit: cover;
         }
         
@@ -224,6 +275,7 @@
             font-size: 0.9rem;
             color: #555;
             margin-bottom: 15px;
+            line-height: 1.5;
         }
         
         .read-more {
@@ -234,15 +286,19 @@
             border-radius: 3px;
             font-size: 0.8rem;
             display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .read-more:hover {
+            background-color: #e67e00;
         }
         
         .featured-news {
-            grid-column: 1;
-            grid-row: 1 / span 2;
+            grid-column: 1 / -1;
         }
         
         .featured-news img {
-            height: 250px;
+            height: 350px;
         }
         
         .category-tag {
@@ -270,26 +326,6 @@
             background-color: #6f42c1;
         }
         
-        /* Achievement Section */
-        .achievement-section {
-            flex: 0 0 30%;
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 5px;
-        }
-        
-        .achievement-list {
-            list-style-type: none;
-        }
-        
-        .achievement-item {
-            background-color: white;
-            padding: 15px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
         /* Profile Section */
         .profile-section {
             padding: 40px 5%;
@@ -306,10 +342,11 @@
             justify-content: space-between;
             gap: 30px;
             margin-top: 30px;
+            flex-wrap: wrap;
         }
         
         .profile-left {
-            flex: 0 0 30%;
+            flex: 1 1 300px;
         }
         
         .vision-card, .mission-card {
@@ -318,6 +355,12 @@
             color: white;
             border-radius: 5px;
             margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .vision-card:hover, .mission-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
         
         .vision-card h3, .mission-card h3 {
@@ -342,7 +385,7 @@
         }
         
         .profile-right {
-            flex: 0 0 65%;
+            flex: 2 1 500px;
             text-align: left;
         }
         
@@ -386,12 +429,17 @@
         
         .activities-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 20px;
         }
         
         .activity-item {
             text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .activity-item:hover {
+            transform: translateY(-5px);
         }
         
         .activity-item img {
@@ -400,6 +448,7 @@
             object-fit: cover;
             border-radius: 5px;
             margin-bottom: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
         }
         
         .activity-item p {
@@ -417,10 +466,12 @@
         .footer-content {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
         }
         
         .footer-left {
-            flex: 0 0 45%;
+            flex: 1 1 300px;
         }
         
         .footer-title {
@@ -445,10 +496,15 @@
             align-items: center;
             color: white;
             text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-3px);
         }
         
         .footer-right {
-            flex: 0 0 45%;
+            flex: 1 1 300px;
         }
         
         .footer-map {
@@ -456,6 +512,57 @@
             background-color: #e9e9e9;
             border-radius: 5px;
             overflow: hidden;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 5%;
+                text-align: center;
+            }
+            
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .sambutan {
+                flex-direction: column;
+            }
+            
+            .sambutan-img {
+                margin-bottom: 20px;
+            }
+            
+            .featured-news img {
+                height: 200px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header-top {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            
+            .main-nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero h4 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
@@ -482,7 +589,7 @@
         </div>
     </nav>
     
-    <!-- Hero Section -->
+    <!-- Hero Section with new background image -->
     <div class="hero">
         <h4>Selamat Datang di Website</h4>
         <h1>MI ROUDLOTUL HUDA</h1>
@@ -490,44 +597,28 @@
         <a href="#" class="hero-button">PPDB ONLINE</a>
     </div>
     
-    <!-- Sambutan Kepala Sekolah -->
-    <div class="sambutan">
-        <div class="sambutan-img">
-            <img src="/images/kepalasekolah.jpg" alt="Kepala Sekolah">
-            <div class="nama-kepala">
-                Ida Rokhimawati, S.Pd<br>
-                MI ROUDLOTUL HUDA
-            </div>
-        </div>
-        <div class="sambutan-text">
-            <h2>Sambutan Kepala Sekolah</h2>
-            <p>Puji Syukur Kita Panjatkan ke Hadirat Allah SWT, Tuhan Yang Maha Esa. Atas limpahan Rahmat Dan Karunia-Nya sehingga Website Madrasah kami, berupa beranda Infomasi Digital yang berfungsi sebagai salah satu media komunikasi dengan masyarakat telah dapat dipertahankan.</p>
-            <p>Selamat Datang di Website MI Roudlotul Huda. Kami berharap Website ini dapat dijadikan wahana interaksi yang positif baik antar civitas akademika maupun masyarakat pada umumnya sehingga dapat menjalin silaturahmi yang erat disegala unsur. Mari kita bekerja dan berkarya dengan mengharap ridho sang Kuasa dan keikhlasan yang tulus dijiwa demi anak bangsa.</p>
-            <p>Website MI Roudlotul Huda sebagai sarana publikasi sekolah kami dalam menginformasikan segala kegiatan akademik. Website ini sebagai sarana komunikasi dan informasi bagi siswa, guru, alumni dan masyarakat pada umumnya, semoga dapat menjadikan MI Roudlotul Huda lebih dikenal sebagai rintisan Madrasah Hebat.</p>
-            <p>Terima Kasih Kepada semua pihak yang telah berpartisipasi dalam pengembangan website ini dan semoga Allah SWT memberikan kekuatan bagi kita semua untuk mencerdaskan kehidupan dan keberadaban bangsa. Amin.</p>
-        </div>
-    </div>
-    
-    <!-- Berita -->
-    <div class="news-grid">
-        @foreach ($beritas as $berita)
-            <div class="news-item {{ $loop->first ? 'featured-news' : '' }}">
-                <img src="{{ asset('storage/berita/' . $berita->gambar) }}" alt="{{ $berita->judul }}">
-                <div class="news-content">
-                    <span class="category-tag category-{{ strtolower($berita->kategori) }}">{{ $berita->kategori }}</span>
-                    <div class="news-date">📅 {{ $berita->created_at->format('d F Y') }}</div>
-                    <h3 class="news-title">{{ $berita->judul }}</h3>
-                    <p class="news-excerpt">{{ Str::limit(strip_tags($berita->isi), 100) }}</p>
-                    <a href="{{ route('berita.show.public', $berita->id) }}" class="read-more">Selengkapnya</a>
+    <!-- Sambutan and Achievement Container -->
+    <div class="sambutan-achievement-container">
+        <!-- Sambutan Kepala Sekolah -->
+        <div class="sambutan">
+            <div class="sambutan-img">
+                <img src="/images/kepalasekolah.jpg" alt="Kepala Sekolah">
+                <div class="nama-kepala">
+                    Ida Rokhimawati, S.Pd<br>
+                    MI ROUDLOTUL HUDA
                 </div>
             </div>
-        @endforeach
-    </div>
+            <div class="sambutan-text">
+                <h2>Sambutan Kepala Sekolah</h2>
+                <p>Puji Syukur Kita Panjatkan ke Hadirat Allah SWT, Tuhan Yang Maha Esa. Atas limpahan Rahmat Dan Karunia-Nya sehingga Website Madrasah kami, berupa beranda Infomasi Digital yang berfungsi sebagai salah satu media komunikasi dengan masyarakat telah dapat dipertahankan.</p>
+                <p>Selamat Datang di Website MI Roudlotul Huda. Kami berharap Website ini dapat dijadikan wahana interaksi yang positif baik antar civitas akademika maupun masyarakat pada umumnya sehingga dapat menjalin silaturahmi yang erat disegala unsur.</p>
+            </div>
+        </div>
         
-        <!-- Achievement Section -->
+        <!-- Achievement Section - now more responsive -->
         <div class="achievement-section">
             <div class="section-header">
-                <h2 class="section-title">Prestasi Baru Ini</h2>
+                <h2 class="section-title">Prestasi Terbaru</h2>
             </div>
             
             <ul class="achievement-list">
@@ -536,7 +627,31 @@
                 <li class="achievement-item">Juara Lomba Pidato Februari</li>
                 <li class="achievement-item">Juara Lomba Mewarnai Maret 2023</li>
                 <li class="achievement-item">Juara Lomba Pramuka Maret 2023</li>
+                <li class="achievement-item">Juara 1 Lomba Tahfidz Tingkat Kecamatan</li>
+                <li class="achievement-item">Juara Harapan 1 Lomba Cerdas Cermat</li>
             </ul>
+        </div>
+    </div>
+    
+    <!-- Berita -->
+    <div class="news-section">
+        <div class="section-header">
+            <h2 class="section-title">Berita Terbaru</h2>
+        </div>
+        
+        <div class="news-grid">
+            @foreach ($beritas as $berita)
+                <div class="news-item {{ $loop->first ? 'featured-news' : '' }}">
+                    <img src="{{ asset('storage/berita/' . $berita->gambar) }}" alt="{{ $berita->judul }}">
+                    <div class="news-content">
+                        <span class="category-tag category-{{ strtolower($berita->kategori) }}">{{ $berita->kategori }}</span>
+                        <div class="news-date">📅 {{ $berita->created_at->format('d F Y') }}</div>
+                        <h3 class="news-title">{{ $berita->judul }}</h3>
+                        <p class="news-excerpt">{{ Str::limit(strip_tags($berita->isi), 100) }}</p>
+                        <a href="{{ route('berita.show.public', $berita->id) }}" class="read-more">Selengkapnya</a>
+                    </div>
+                </div>
+            @endforeach
         </div>
     </div>
     
