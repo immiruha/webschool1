@@ -264,6 +264,22 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
+
+        .news-scroll-wrapper {
+            max-height: 800px; /* atur sesuai kebutuhan */
+            overflow-y: auto;  /* scroll vertikal */
+            padding-right: 10px; /* agar tidak nempel scrollbar ke konten */
+        }
+
+        /* opsional, styling scrollbar agar lebih rapi */
+        .news-scroll-wrapper::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .news-scroll-wrapper::-webkit-scrollbar-thumb {
+            background-color: rgba(0,0,0,0.2);
+            border-radius: 4px;
+        }
         
         .news-item img {
             width: 100%;
@@ -450,7 +466,7 @@
         
         .activities-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 20px;
         }
         
@@ -591,8 +607,8 @@
     <!-- Header Top -->
     <div class="header-top">
         <div class="contact-info">
-            <span>📞 +62 811 234 5678</span>
-            <span>✉️ miruhasda@gmail.com</span>
+            <span>📱 +62 857 0700 9311</span>
+            <span>✉️ miroudlotulhuda@gmail.com</span>
         </div>
     </div>
     
@@ -643,23 +659,23 @@
             </div>
             
             <ul class="achievement-list">
-                <li class="achievement-item">Juara Lomba Vokal Senjati Agustus 2023 WEDORO KLURAK</li>
-                <li class="achievement-item">Pengumuman Pemenang Penulisan Pelopor 2022</li>
-                <li class="achievement-item">Juara Lomba Pidato Februari</li>
-                <li class="achievement-item">Juara Lomba Mewarnai Maret 2023</li>
-                <li class="achievement-item">Juara Lomba Pramuka Maret 2023</li>
-                <li class="achievement-item">Juara 1 Lomba Tahfidz Tingkat Kecamatan</li>
-                <li class="achievement-item">Juara Harapan 1 Lomba Cerdas Cermat</li>
+                @forelse ($prestasis as $prestasi)
+                <li class="achievement-item">{{ $prestasi->judul}}</li>
+                @empty
+                <li class="achirvement-item">Belum ada prestasi yang ditampilkan.</li>
+                @endforelse
             </ul>
+
         </div>
     </div>
-    
-    <!-- Berita -->
+     
+     <!-- Berita -->
     <div class="news-section">
-        <div class="section-header">
-            <h2 class="section-title">Berita Terbaru</h2>
-        </div>
-        
+    <div class="section-header">
+        <h2 class="section-title">Berita Terbaru</h2>
+    </div>
+
+    <div class="news-scroll-wrapper">
         <div class="news-grid">
             @foreach ($beritas as $berita)
                 <div class="news-item {{ $loop->first ? 'featured-news' : '' }}">
@@ -675,6 +691,8 @@
             @endforeach
         </div>
     </div>
+</div>
+
     
     <!-- Profile Section -->
     <div class="profile-section">
@@ -776,16 +794,13 @@
                 </div>
                 
                 <div class="social-links">
-                    <a href="#"><span>📱 WhatsApp</span></a>
+                    <a href="#"><span>📱 +62 857 0700 9311</span></a>
                 </div>
                 <div class="social-links">
-                    <a href="#"><span>📘 miroudlotulhuda</span></a>
+                    <a href="#"><span>✉️ miroudlotulhuda@gmail.com</span></a>
                 </div>
                 <div class="social-links">
-                    <a href="#"><span>📷 @miroudlotulhuda</span></a>
-                </div>
-                <div class="social-links">
-                    <a href="#"><span>📞 031 123 456</span></a>
+                    <a href="#"><span>📷 @miruha06</span></a>
                 </div>
             </div>
             

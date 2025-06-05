@@ -433,8 +433,8 @@
     <header class="header">
         <div class="header-top">
             <div class="contact-info">
-                <span>📞 +62 811 234 4578</span>
-                <span>✉️ miruhasda@gmail.com</span>
+                <span>📱 +62 857 0700 9311</span>
+                <span>✉️ miroudlotulhuda@gmail.com</span>
             </div>
         </div>
         
@@ -582,16 +582,13 @@
                 </div>
                 
                 <div class="social-links">
-                    <a href="#"><span>📱 WhatsApp</span></a>
+                    <a href="#"><span>📱 +62 857 0700 9311</span></a>
                 </div>
                 <div class="social-links">
-                    <a href="#"><span>📘 miroudlotulhuda</span></a>
+                    <a href="#"><span>✉️ miroudlotulhuda@gmail.com</span></a>
                 </div>
                 <div class="social-links">
-                    <a href="#"><span>📷 @miroudlotulhuda</span></a>
-                </div>
-                <div class="social-links">
-                    <a href="#"><span>📞 031 123 456</span></a>
+                    <a href="#"><span>📷 @miruha06</span></a>
                 </div>
             </div>
             

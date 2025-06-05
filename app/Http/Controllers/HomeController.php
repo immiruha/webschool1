@@ -9,9 +9,10 @@ class HomeController extends Controller
 {
     public function index()
     {
-        // Ambil 4 berita terbaru
-        $beritas = Berita::latest()->take(4)->get();
+        $beritas = Berita::latest()->get();
+        $prestasis = Berita::where('kategori', 'prestasi')->latest()->take(7)->get();
 
-        return view('home', compact('beritas'));
+        return view('home', compact('beritas', 'prestasis'));
     }
+
 }

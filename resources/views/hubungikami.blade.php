@@ -304,8 +304,8 @@
     <header class="header">
         <div class="header-top">
             <div class="contact-info">
-                <span>📞 +62 811 234 4578</span>
-                <span>✉️ miruhasda@gmail.com</span>
+                <span>📱 +62 857 0700 9311</span>
+                <span>✉️ miroudlotulhuda@gmail.com</span>
             </div>
         </div>
         
@@ -329,25 +329,20 @@
             <!-- Contact Section -->
             <section class="contact-section">
                 <h2>Hubungi Kami</h2>
-                
-                <div class="contact-item">
-                    <div class="contact-icon">📘</div>
-                    <div class="contact-text">@Miruhawedoroklurak</div>
-                </div>
-                
+
                 <div class="contact-item">
                     <div class="contact-icon">📷</div>
-                    <div class="contact-text">@Miruhawedoroklurak</div>
+                    <div class="contact-text">@miruha06</div>
                 </div>
                 
                 <div class="contact-item">
                     <div class="contact-icon">✉️</div>
-                    <div class="contact-text">@Miruhawedoroklurak</div>
+                    <div class="contact-text">miroudlotulhuda@gmail.com</div>
                 </div>
                 
                 <div class="contact-item">
                     <div class="contact-icon">📱</div>
-                    <div class="contact-text">+62 123 456</div>
+                    <div class="contact-text">+62 857 0700 9311</div>
                 </div>
             </section>
 
