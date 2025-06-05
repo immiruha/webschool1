@@ -10,7 +10,7 @@ class HomeController extends Controller
     public function index()
     {
         $beritas = Berita::latest()->get();
-        $prestasis = Berita::where('kategori', 'prestasi')->latest()->take(7)->get();
+        $prestasis = Berita::where('kategori', 'prestasi')->latest()->get();
 
         return view('home', compact('beritas', 'prestasis'));
     }

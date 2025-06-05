@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Roudlotul Huda Wedoro Klurak</title>
+    <link rel="icon" href="{{ asset('images/logo-sekolah.ico') }}">
     <style>
         * {
             margin: 0;
