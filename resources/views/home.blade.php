@@ -623,7 +623,6 @@
             <a href="{{ url('/') }}" class="active">Beranda</a>
             <a href="{{ route('tentang') }}">Tentang Kami</a>
             <a href="{{ route('hubungi') }}">Hubungi Kami</a>
-            <button class="nav-button">PPDB</button>
         </div>
     </nav>
     
@@ -632,7 +631,6 @@
         <h4>Selamat Datang di Website</h4>
         <h1>MI ROUDLOTUL HUDA</h1>
         <p>Website ini sebagai sarana informasi dan komunikasi untuk memberikan kemudahan dalam mengakses seluruh informasi seputar kegiatan, prestasi, dan berita yang terjadi, terbaru, dan juga mengedukasi siswa-siswi.</p>
-        <a href="#" class="hero-button">PPDB ONLINE</a>
     </div>
     
     <!-- Sambutan and Achievement Container -->
